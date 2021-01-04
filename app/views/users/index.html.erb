@@ -1,6 +1,14 @@
+<h2>使っているユーザー一覧</h2>
+
 <% @users.each do |user| %>
     
+    <p>
     <%= user.username %>
+    <% if current_user.id == user.id%>
+      <%= link_to "名前変更", root_path %>
+      <%= link_to "アカウント削除", root_path %>
+    <% end %>
+    </p>
 
     
 <% end %>

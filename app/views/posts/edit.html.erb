@@ -1,0 +1,9 @@
+<%= form_for @post,url: post_path(@post) do |f| %>
+<p>
+<%= f.text_area :content, placeholder: "メモ" %>
+</p>
+
+<p>
+<%= f.submit %>
+</p>
+<% end %>
